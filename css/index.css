@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+    font-size: medium;
+}
+
+body {
+    background-image: url('../images/mapBG.png'); 
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat;
+    background-position: center center; 
+    margin: 0; 
+    height: 100vh; 
+    display: flex; /* Use flexbox */
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Grid Alignment */
+.container {
+    background-color: blanchedalmond;
+    max-width: 1260px; /* Maximum width for larger screens */
+    width: 100%; /* Full width on smaller screens */
+    height: 65%;
+    margin: 0 auto; 
+    text-align: center; 
+    border: 1px solid #c0c0c0; /* Light grey border */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.img-container, .input-container, .logo, .company {
+    width: 100%; /* Full width within the container */
+    max-width: 960px; /* Maximum width */
+    margin: auto; /* Centering */
+}
+
+.img-container {
+    width: 80%; 
+    height: auto; 
+    max-height: 375px; /* Maximum height of the container */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Hide overflowed content */
+}
+
+/* Logo Styles */
+.logo img {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Max width is the container's width */
+    max-height: 450px; /* Max height as per container */
+    display: block; /* Ensure img is block level */
+    margin: 0 auto; /* Center the image */
+}
+
+.logo {
+    margin-top:40px;
+}
+
+.company {
+    font-size: 40px; 
+}
+
+/* Input Styles */
+.input-container input {
+    width: 100%; /* Full width of the container */
+    padding: 5px; /* Add some padding for better appearance */
+    margin-top: 10px; /* Add margin to separate inputs */
+}
+
+/* Button Styles */
+button {
+    color: white;
+    background-color: purple;
+    border: 2px solid transparent; /* Refined border */
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px; /* More rounded corners */
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+button:hover, button:focus {
+    background-color: #5e009c; /* Slightly darker purple on hover/focus */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+    border-color: #5e009c; /* Matching border color on hover/focus */
+}
+
+/* Specific Button Styles */
+#filter-btn {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    width: max-content;
+}
+
+#add-input-btn {
+    background-color: transparent;
+    border: 2px solid purple; /* Consistent border color */
+    color: purple;
+}
+
+#add-input-btn:hover, #add-input-btn:focus {
+    background-color: purple;
+    color: white;
+    border-color: transparent; /* Hide border on hover/focus */
+}
+
+#search-btn {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 30px; /* Rounded corners but not a complete circle */
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Cursor changes to a pointer to indicate it's clickable */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#search-btn:hover {
+    background-color: black; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+#input-fields {
+    height: 100px; 
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+#intro {
+    margin-top: 15%;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.btn {
+    margin-top: 5%;
+}
+
+/* Form CSS*/
+
+.modal-title {
+    font-weight: bold; /* Make the modal title bold */
+    color: #495057; /* Slightly darker color for the title */
+}
+
+/* Button Customisation */
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Primary button border color */
+    box-shadow: 0 2px 4px 0 rgba(0,123,255,.5); /* Subtle shadow for depth */
+    transition: background-color .3s, border-color .3s, box-shadow .3s; /* Smooth transition for hover effects */
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0056b3; /* Darker shade for hover state */
+    border-color: #0056b3; /* Darker border for hover state */
+    box-shadow: 0 2px 4px 0 rgba(0,56,179,.5); /* Shadow for hover state */
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6; /* Light border for a subtle separation */
+    justify-content: center; /* Center the buttons */
+}
+
+/* Submit button fills the modal footer */
+.modal-footer .btn-primary {
+    width: calc(100% - 30px); /* Full width minus padding */
+    margin: 15px; /* Ensure there's space around the button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .company {
+        font-size: 2rem; /* Smaller font size on smaller screens */
+    }
+
+    .input-container, .logo {
+        padding: 0 15px; /* Adjust padding on smaller screens */
+    }
+
+    .btn {
+        padding: 5px 10px; /* Smaller buttons on smaller screens */
+    }
+}

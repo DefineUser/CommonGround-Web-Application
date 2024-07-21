@@ -1,0 +1,133 @@
+.fullwidth {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.mapoptcontainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.mapopt {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: purple;
+    color:white;
+}
+
+#mapopt {
+    background-color:mediumorchid;
+    color:white;
+}
+
+#regenmeet {
+    background-color:limegreen;
+    color: white;
+}
+
+.mapopttitle {
+    background-color: white;
+}
+
+
+
+#text {
+position: absolute;
+background-color: blanchedalmond;
+width: 100%;
+height: 100%;
+}
+
+#map {
+    z-index: 1;
+}
+
+#overlay-btn {
+    position: absolute; 
+    top: 10px; 
+    left: 50px;
+    z-index: 2;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0; /* Position it on the left */
+    width: 350px; 
+    height: 100%;
+    background-color: blanchedalmond;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); 
+    overflow-y: auto; /* To enable scrolling for small screens */
+    z-index: 3; /* Above other elements */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: transform 0.3s ease-in-out;
+}
+
+#overlay.open {
+    transform: translateX(0);
+}
+
+#overlay-content {
+    padding: 20px;
+}
+
+.close-overlay {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#unsplash-image {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.action-buttons button, .action-buttons a {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#nearby-points-list li {
+    display: flex; /* Make each list item a flex container */
+    align-items: center; /* Align items vertically in the center */
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#nearby-points-list img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 130px; 
+    height: auto;
+    margin-right: 20px; /* Space between image and description */
+}
+
+#nearby-points-list .list-item-content {
+    display: flex; /* Ensures content within is aligned in a row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+#nearby-points-list .list-item-content > div {
+    display: flex;
+    flex-direction: column; /* Stack title and address vertically */
+}
+
+#nearby-points-list h4 {
+    font-size: 16px; 
+    margin-bottom: 5px; /* Add a little space between the title and description */
+}
+
+#nearby-points-list p {
+    font-size: 12px; 
+}
+
+#tracking-btn {
+    position: absolute; 
+    top: 50px; 
+    left: 50px; 
+    z-index: 2;
+}

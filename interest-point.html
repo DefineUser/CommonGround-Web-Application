@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="Common Ground" />
+    <meta name="subject" content="Common Ground" />
+    <meta name="keywords" content="Common, Ground" />
+    <meta name="Resource-type" content="Document" />
+    <meta property="og:url" content="https://commonground.com/" />
+    <meta property="og:title" content="Common Ground" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://commonground.com/static/images/og_background.png" />
+    <meta property="og:description" content="Common Ground" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <title>Common Ground</title>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!-- Include Leaflet Routing Machine CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <style>
+        /* Set the size of the map */
+        #map {
+            height: 940px; /*need to set to full height*/
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/interest-point.css" />
+  </head>
+  <body>
+    <div id="overlay" onclick="off()">
+      <div id="overlay-content" class="container text-center">
+          <div id="place-details" class="mt-3">
+              <h3 id="place-name"></h3>
+              <div id="place-address"></div>
+              <img id="unsplash-image" src="" alt="Unsplash Image" class="img-fluid" />
+              <div id="route-info">
+                  <div id="route-duration"></div>
+                  <div id="route-distance"></div>
+              </div>
+              <div id="nearby-points">
+                <h3>Alternatives Nearby</h3>
+                <ul id="nearby-points-list"></ul> 
+            </div>
+              <div class="action-buttons mt-3">
+                  <a href="index.html" id="regenmeet" class="btn btn-secondary">Regenerate meetup</a>
+              </div>
+          </div>
+      </div>
+      <button onclick="off()" class="close-overlay btn btn-secondary">Close</button>
+  </div>
+    <div id="map" style="padding:20px"> </div>
+    <div id="tracking-btn"><button onclick="toggleTracking()">Start Tracking</button></div>
+    <div id="overlay-btn"><button onclick="on()">Turn on overlay effect</button></div>
+    <noscript>
+      <strong
+        >We're sorry but commonground-b2c-client-web doesn't work properly
+        without JavaScript enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <script src = "js/interest-point.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+  </body>
+</html>
